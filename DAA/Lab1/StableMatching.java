@@ -92,9 +92,12 @@ public class StableMatching{
 		//no of ladies proposed to
 		int count[]=new int[n];
 		for(int i =0;i<n;i++)
-			{freemen.add(i);
-			freewomen.add(i);
-			 count[i]=0;
+			{
+				engaged[i][0]=-1;
+				engaged[i][1]=-1;
+				freemen.add(i);
+				freewomen.add(i);
+			 	count[i]=0;
 			}
 
 		while(!freemen.isEmpty())
@@ -121,6 +124,13 @@ public class StableMatching{
 
 
 
+
+	}
+
+
+
+	static void setEngaged(int man,int woman,int [] engaged)
+	{
 
 	}
 
