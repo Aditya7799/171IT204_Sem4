@@ -15,10 +15,8 @@ int count_split(vector<int> a,int low,int mid,int high)
 		if(L[l]<R[r])
 			l++;
 		if(L[l]>R[r])
-		{
-			r++;
-			count=count+(L.size()-1-l)+1;
-		}
+			r++,count=count+(L.size()-1-l)+1;
+		
 	}
 
 	return count;
@@ -29,10 +27,8 @@ int count_inversions(vector<int> a,int low,int high)
 	if(low>=high)
 		return 0;
 	else
-	{
-		int mid=(low +high)/2;
-		return(count_inversions(a,low,mid)+count_inversions(a,mid+1,high)+count_split(a,low,mid,high));
-	}
+		int mid=(low +high)/2,return(count_inversions(a,low,mid)+count_inversions(a,mid+1,high)+count_split(a,low,mid,high));
+	
 }
 
 int main()
