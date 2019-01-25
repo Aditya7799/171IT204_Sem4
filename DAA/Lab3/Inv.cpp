@@ -3,7 +3,6 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-
 int count_split(vector<int> a,int low,int mid,int high)
 {	int count=0;
 	vector<int> L(a.begin()+low, a.begin()+mid+1);
@@ -18,7 +17,7 @@ int count_split(vector<int> a,int low,int mid,int high)
 		if(L[l]>R[r])
 		{
 			r++;
-			count=count+(r*(L.size()-1-l))+1;
+			count=count+(L.size()-1-l)+1;
 		}
 	}
 
@@ -39,14 +38,12 @@ int count_inversions(vector<int> a,int low,int high)
 int main()
 {
 	vector<int> a;
-	a.push_back(4);
-	a.push_back(10);
-	a.push_back(8);
+	a.push_back(0);
 	a.push_back(2);
+	a.push_back(8);
 	a.push_back(1);
-	// a.push_back(1);
-	cout<<count_inversions(a,0,4);
-
+	a.push_back(6);
+	cout<<count_inversions(a,0,4)<<" Inversions"<<endl;
 	return 0;
 }
 
