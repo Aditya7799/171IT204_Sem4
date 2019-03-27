@@ -62,7 +62,7 @@ def main(l):
 
 def readfile():
 	dir={}
-	f=open('basictext.txt')
+	f=open('textfile.txt')
 	o=open('encoded.bin','wb')
 	x=f.readline()
 	while(len(x)!=0):
